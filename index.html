@@ -4,12 +4,6 @@
 		<title></title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/menu.css">
-        
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-        <script type="text/javascript" src="js/menu.js"></script>
-        
 	</head>
 	<body>
     
@@ -26,80 +20,60 @@
         </div>
     
     <div class="cont_left" id="aside1">
-    
-    <br><br>
-    
-    <div ng-app="myApp">
-  <div ng-controller="myController">
-
-    <div>
-      <input type="button" value="TREE MODEL 1" data-ng-click="roleList = roleList1" /> <input type="button" value="TREE MODEL 2" data-ng-click="roleList = roleList2" />
-    </div>
-
-
-    <!--
-      [TREE attribute]
-      angular-treeview: the treeview directive
-      tree-model : the tree model on $scope.
-      node-id : each node's id
-      node-label : each node's label
-      node-children: each node's children
-    -->
-    <div
-      data-angular-treeview="true"
-      data-tree-model="roleList"
-      data-node-id="roleId"
-      data-node-label="roleName"
-      data-node-children="children" >
-    </div>
-
-  </div>
-</div>
-    
-    <br><br>
         
         <nav>
         
         <ul>
           <li><a href="#" class="nav_open"><div>ОАО РосСпиртПром</div></a></li>
           <div class="sub_nav">
-          <li><a href="#" class="nav_li_open"><div class="ic_nav_error">Крымская Водочная Компания</div></a></li>
+          <li><a href="#" class="sub_active"><div>Крымская Водочная Компания</div></a></li>
           
           <div class="sub_sub_nav">
            <li>
-             <div class="ic_nav_noconnect"><a href="#">000</a></div></li>
-          <li><div class="ic_nav_ercon"><a href="#" class="nav_sub_active">001</a></div></li>
+             <a href="#"><div class="ic_nav_noconnect">000</div></a></li>
+          <li><a href="#" class="sub_sub_active"><div class="ic_nav_ercon">001</div></a></li>
           <li><a href="#">002</a></li>
           </div>
          
-          <li><a href="#" class="ic_nav_error">Крымская Водочная Компания</a></li>
-          <li><a href="#"><div class="ic_nav_ercon">Крымская Водочная Компания</div></a></li>
+          <li><a href="#"><div>Крымская Водочная Компания</div></a></li>
+          <li><a href="#"><div class="ic_nav_error">Крымская Водочная Компания</div></a></li>
           <li><a href="#">Крымская Водочная Компания</a></li>
           </div>
          
           </ul>
           
           <ul>
-          <li><a href="#" class="nav_open"><div>ОАО РосСпиртПром</div></a></li>
-          </ul>
+          <li><a href="#" class="nav_open"><div>Центр ИКТ</div></a></li>
+          <div class="sub_nav">
+          <li><a href="#" class="sub_active"><div>Стенд</div></a></li>
           
+          <div class="sub_sub_nav">
+           <li>
+             <a href="#"><div class="ic_nav_noconnect">000</div></a>
+             </li>
+          </div>
+         
+          <li><a href="#" class="sub_active"><div>ALCOSPOT АВТО</div></a></li>
+           <div class="sub_sub_nav">
+           <li>
+             <a href="#"><div class="ic_nav_error">100</div></a>
+             </li>
+          </div>
+          </div>
+          </ul>
           
           <ul>
-          <li><a href="#">ОАО РосСпиртПром</a></li>
+          <li><a href="#"><div  class="ic_nav_ercon">ОАО РосСпиртПром</div></a></li>
           </ul>
           
           <ul>
-          <li><a href="#">ОАО РосСпиртПром<div class="ic_nav_error"></div><div class="ic_nav_noconnect"></div></a></li>
+          <li><a href="#"><div  class="ic_nav_error">ОАО РосСпиртПром</div></a></li>
           </ul>
           
           <ul>
-          <li><a href="#">ОАО РосСпиртПром<div class="ic_nav_error"></div></a></li>
+          <li><a href="#"><div>ОАО РосСпиртПром</div></a></li>
           </ul>
           
-          <ul>
-          <li><a href="#">ОАО РосСпиртПром</a></li>
-          </ul>
-
           
         </nav>
         
@@ -116,9 +90,9 @@
     
     <div class="case_tit">
     <div>
-    Шкафы: <li><a href="#" class="case_active">000</a><div class="ic_error"></div></li><li><a href="#">001</a><div class="ic_error"></div><div class="ic_noconnect"></div></li><li><a href="#">002</a><div class="ic_error"></div></li>
+    Шкафы: <li><a href="#">000</a><div class="ic_noconnect"></div></li><li><a href="#" class="case_active">001</a><div class="ic_error"></div><div class="ic_noconnect"></div></li><li><a href="#">002</a><div class="ic_error"></div></li>
    </div>
-    <span>Номер:<strong>000</strong></span><span>Версия ПО:<strong>2.0</strong></span><span>Время последнего обновления:<strong>14.01.2016  14:03:11</strong></span>
+    <span>Номер:<strong>001</strong></span><span>Версия ПО:<strong>2.0</strong></span><span>Время последнего обновления:<strong class="case_noconnect">14.01.2016  14:03:11</strong></span>
     </div>
        
        <form>
@@ -147,12 +121,12 @@
          <div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>0.00</span></div>
          </div>
          
-         <div class="block1_row block1_green_row">
+         <div class="block1_row">
          <div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>Водка "Волгоградские водки 0.25"</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div>
          <div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>0.00</span></div>
          </div>
          
-         <div class="block1_row block1_green_row">
+         <div class="block1_row">
          <div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>Водка "Волгоградские водки 0.25"</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div>
          <div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>qqqq</span></div><div class="block1_cell"><span>0.00</span></div>
          </div>
@@ -179,7 +153,7 @@
          <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
          </div>
          
-         <div class="block1_row block1_error_row">
+         <div class="block1_row block1_green_row">
          <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
          </div>
          
@@ -212,22 +186,22 @@
         </div>
         </form>
         
-       <form>
-       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_logs" />
-       <div class="block1 block1_logs">
+        <form>
+       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_erflk" />
+       <div class="block1 block1_erflk">
         <div class="block1_head"> 
-        <div class="block1_title">Логи</div>
+        <div class="block1_title">Ошибки ФЛК</div>
         <div class="block1_error"></div>
-        <label for="block1_logs" class="block1_open"></label>
+        <label for="block1_erflk" class="block1_open"></label>
         <div class="block1_errorline"></div>
         </div>
          <div class="block1_table">
          <div class="block1_row block1_row_top">
-         <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Ошибка</span></div>
          </div>
          
-          <div class="block1_row">
-         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение Сообщение Сообщение Сообщение Сообщение Сообщение</span></div>
+          <div class="block1_row block1_error_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка</span></div>
          </div>
          
          <div class="block1_row">
@@ -248,21 +222,43 @@
         </form>
         
         <form>
-       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_erflk" />
-       <div class="block1 block1_erflk">
+       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_logs" />
+       <div class="block1 block1_logs">
         <div class="block1_head"> 
-        <div class="block1_title">Ошибки ФЛК</div>
-        <div class="block1_error"></div>
-        <label for="block1_erflk" class="block1_open"></label>
-        <div class="block1_errorline"></div>
+        <div class="block1_title">Логи</div>
+        <label for="block1_logs" class="block1_open"></label>
         </div>
-         <div class="block1_table">
-         <div class="block1_row block1_row_top">
-         <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Ошибка</span></div>
+        
+        <div class="block_calendar">
+        
+         <div class="block_calendar_days"><a href="#">Месяц</a><a href="#" class="block_calendar_active">Неделя</a><a href="#">Сегодня</a></div>
+
+         <div class="block_calendar_time">
+         <span>Период:</span> <input name="" type="text"><span>&#8211;</span><input name="" type="text"> <div><a href="#" class="calendar_but">Показать</a></div>
+         </div>
+        <a href="#" class="calendar_logexp">Выгрузить логи</a>
+         
          </div>
          
+         <div class="block1_table">
+<div class="block1_row block1_row_top">
+  <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Сообщение</span></div>
+</div>
+         
           <div class="block1_row">
-         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка</span></div>
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение Сообщение Сообщение Сообщение Сообщение Сообщение</span></div>
+         </div>
+         
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+         
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+         
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
          </div>
          
          <div class="block1_row">
@@ -279,7 +275,7 @@
      
          </div> 
 
-        </div> 
+      </div> 
         </form>
         
         
